@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.12.1 on linux)" generated="2025-10-31T05:37:13.996901" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/workspaces/Assessment_Decentro/api-automation-tests/tests">
+<suite id="s1-s1" name="Get User Test" source="/workspaces/Assessment_Decentro/api-automation-tests/tests/get_user_test.robot">
+<test id="s1-s1-t1" name="Get Existing User" line="5">
+<kw name="Create Session" owner="keywords">
+<kw name="Create Session" owner="keywords">
+<msg time="2025-10-31T05:37:14.019606" level="FAIL">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2025-10-31T05:37:14.019463" elapsed="0.000185">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.019179" elapsed="0.000595">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<kw name="Get User By ID" owner="keywords">
+<var>${resp}</var>
+<arg>2</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.019997" elapsed="0.000025"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-10-31T05:37:14.020336" elapsed="0.000026"/>
+</kw>
+<kw name="Dictionary Should Contain Key">
+<arg>${resp.json()}</arg>
+<arg>data</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.020570" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.018651" elapsed="0.002179">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</test>
+<test id="s1-s1-t2" name="Get Non-Existing User" line="11">
+<kw name="Create Session" owner="keywords">
+<kw name="Create Session" owner="keywords">
+<msg time="2025-10-31T05:37:14.021951" level="FAIL">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2025-10-31T05:37:14.021771" elapsed="0.000231">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.021470" elapsed="0.000658">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<kw name="Get User By ID" owner="keywords">
+<var>${resp}</var>
+<arg>23</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.022380" elapsed="0.000034"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>404</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-10-31T05:37:14.022561" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.021133" elapsed="0.001659">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</test>
+<status status="FAIL" start="2025-10-31T05:37:14.015727" elapsed="0.007614"/>
+</suite>
+<suite id="s1-s2" name="Post User Test" source="/workspaces/Assessment_Decentro/api-automation-tests/tests/post_user_test.robot">
+<test id="s1-s2-t1" name="Create New User Successfully" line="5">
+<kw name="Create Session" owner="keywords">
+<kw name="Create Session" owner="keywords">
+<msg time="2025-10-31T05:37:14.026436" level="FAIL">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2025-10-31T05:37:14.026234" elapsed="0.000267">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.025777" elapsed="0.000848">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<kw name="Create New User" owner="keywords">
+<var>${resp}</var>
+<arg>Deekshith</arg>
+<arg>Developer</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.026853" elapsed="0.000031"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-10-31T05:37:14.027036" elapsed="0.000025"/>
+</kw>
+<kw name="Dictionary Should Contain Key">
+<arg>${resp.json()}</arg>
+<arg>id</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.027230" elapsed="0.000024"/>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.025364" elapsed="0.002111">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</test>
+<test id="s1-s2-t2" name="Create User With Empty Data" line="11">
+<kw name="Create Session" owner="keywords">
+<kw name="Create Session" owner="keywords">
+<msg time="2025-10-31T05:37:14.028610" level="FAIL">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2025-10-31T05:37:14.028447" elapsed="0.000211">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.028131" elapsed="0.000654">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<kw name="POST On Session">
+<var>${resp}</var>
+<arg>reqres</arg>
+<arg>/users</arg>
+<arg>json={}</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.028982" elapsed="0.000028"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-10-31T05:37:14.029183" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.027774" elapsed="0.001645">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</test>
+<status status="FAIL" start="2025-10-31T05:37:14.023929" elapsed="0.005866"/>
+</suite>
+<suite id="s1-s3" name="Put User Test" source="/workspaces/Assessment_Decentro/api-automation-tests/tests/put_user_test.robot">
+<test id="s1-s3-t1" name="Update Existing User" line="5">
+<kw name="Create Session" owner="keywords">
+<kw name="Create Session" owner="keywords">
+<msg time="2025-10-31T05:37:14.032399" level="FAIL">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2025-10-31T05:37:14.032269" elapsed="0.000162">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.032060" elapsed="0.000460">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<kw name="Update User" owner="keywords">
+<var>${resp}</var>
+<arg>2</arg>
+<arg>Deekshith</arg>
+<arg>Engineer</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.032747" elapsed="0.000033"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-10-31T05:37:14.032955" elapsed="0.000032"/>
+</kw>
+<kw name="Dictionary Should Contain Key">
+<arg>${resp.json()}</arg>
+<arg>updatedAt</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.033171" elapsed="0.000026"/>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.031643" elapsed="0.001774">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</test>
+<test id="s1-s3-t2" name="Update User With Invalid ID" line="11">
+<kw name="Create Session" owner="keywords">
+<kw name="Create Session" owner="keywords">
+<msg time="2025-10-31T05:37:14.034560" level="FAIL">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</msg>
+<arg>reqres</arg>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2025-10-31T05:37:14.034402" elapsed="0.000212">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.034105" elapsed="0.000645">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</kw>
+<kw name="Update User" owner="keywords">
+<var>${resp}</var>
+<arg>9999</arg>
+<arg>John</arg>
+<arg>QA</arg>
+<status status="NOT RUN" start="2025-10-31T05:37:14.034988" elapsed="0.000035"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="NOT RUN" start="2025-10-31T05:37:14.035258" elapsed="0.000029"/>
+</kw>
+<status status="FAIL" start="2025-10-31T05:37:14.033699" elapsed="0.001795">Keyword 'keywords.Create Session' expected 0 arguments, got 2.</status>
+</test>
+<status status="FAIL" start="2025-10-31T05:37:14.030333" elapsed="0.005542"/>
+</suite>
+<status status="FAIL" start="2025-10-31T05:37:13.997792" elapsed="0.038739"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="6" skip="0">Tests</stat>
+<stat name="Get User Test" id="s1-s1" pass="0" fail="2" skip="0">Tests.Get User Test</stat>
+<stat name="Post User Test" id="s1-s2" pass="0" fail="2" skip="0">Tests.Post User Test</stat>
+<stat name="Put User Test" id="s1-s3" pass="0" fail="2" skip="0">Tests.Put User Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-10-31T05:37:14.017706" level="WARN">Error in file '/workspaces/Assessment_Decentro/api-automation-tests/resources/keywords.robot' on line 13: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-31T05:37:14.017907" level="WARN">Error in file '/workspaces/Assessment_Decentro/api-automation-tests/resources/keywords.robot' on line 19: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2025-10-31T05:37:14.018092" level="WARN">Error in file '/workspaces/Assessment_Decentro/api-automation-tests/resources/keywords.robot' on line 25: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
